@@ -7,69 +7,66 @@ on:
     branches: [ "main" ]
 
 jobs:
-  job-1:
-    build:
-      runs-on: ubuntu-latest
-      timeout-minutes: 30
+  build_on_ubuntu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
 
-      strategy:
-        matrix:
-          node-version: [16.x, 18.x, 20.x]
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
 
-      steps:
-      - uses: actions/checkout@v3
+    steps:
+    - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Build
-        run: |
-          npm install
-          npm run test
+    - name: Build
+      run: |
+        npm install
+        npm run test
 
-  job-2:
-    build:
-      runs-on: window-latest
-      timeout-minutes: 30
+  build_on_window:
+    runs-on: window-latest
+    timeout-minutes: 30
 
-      strategy:
-        matrix:
-          node-version: [16.x, 18.x, 20.x]
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
 
-      steps:
-      - uses: actions/checkout@v3
+    steps:
+    - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Build
-        run: |
-          npm install
-          npm run test
+    - name: Build
+      run: |
+        npm install
+        npm run test
 
 
-  job-3:
-    build:
-      runs-on: macos-latest
-      timeout-minutes: 30
+  build_on_macos:
+    runs-on: macos-latest
+    timeout-minutes: 30
 
-      strategy:
-        matrix:
-          node-version: [16.x, 18.x, 20.x]
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x]
 
-      steps:
-      - uses: actions/checkout@v3
+    steps:
+    - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Build
-        run: |
-          npm install
-          npm run test
+    - name: Build
+      run: |
+        npm install
+        npm run test
