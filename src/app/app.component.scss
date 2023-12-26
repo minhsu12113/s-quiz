@@ -1,0 +1,14 @@
+main {
+  .windows-bar {
+    -webkit-app-region: drag;
+    i {
+      padding: 12px;
+      color:#1e293b;
+      -webkit-app-region: no-drag;
+    }
+
+    i:hover {
+      opacity: 0.7;
+    }
+  }
+}

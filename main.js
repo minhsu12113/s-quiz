@@ -10,18 +10,21 @@ function onReady () {
     height: 700,
     webPreferences: {
       nodeIntegration: false,
-      contextIsolation: true
-    }
+    },
+    frame: false,
+    resizable: false,
+    autoHideMenuBar: true,
+    transparent: true,
   })
 
-	// win.loadURL(url.format({
-	// 	pathname: path.join(__dirname,'dist/s-quiz/index.html'),
-	// 	protocol: 'file:',
-	// 	slashes: true
-	// }))
-  win.loadURL('http://localhost:4200');
+	win.loadURL(url.format({
+		pathname: path.join(__dirname,'dist/s-quiz/index.html'),
+		protocol: 'file:',
+		slashes: true
+	}))
 
-  win.webContents.openDevTools()
+  win.loadURL('http://localhost:4200');
+  //win.webContents.openDevTools()
 }
 
 app.on('ready', onReady);
