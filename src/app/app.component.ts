@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 's-quiz';
+  nodeVersion = (window as any).versions.node();
+
+  minizedWindow() {
+    (window as any).elecApi.mainWindowMinimize()
+  }
+
+  maxinizedWindow() {
+    (window as any).elecApi.mainWindowMaximizedOrUnMaximized()
+  }
+
+  closeWindow() {
+    (window as any).elecApi.closeWindow()
+  }
+
 }
+
+

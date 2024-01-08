@@ -1,11 +1,10 @@
-<main class="bg-cyan-300 h-screen bg-slate-100 rounded-lg">
+<main class="bg-cyan-300 h-screen bg-slate-100 shadow-2xl">
 
   <!-- Window bar -->
-  <section class="windows-bar flex flex-row-reverse bg-slate-200
-  rounded-t-lg">
+  <section class="windows-bar flex flex-row-reverse bg-slate-200 ">
 
     <!-- Close Window Icon -->
-    <i>
+    <i (click)="closeWindow()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -19,7 +18,7 @@
     </i>
 
     <!-- Maximized Window Icon -->
-    <i>
+    <i (click)="maxinizedWindow()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -35,7 +34,7 @@
     </i>
 
     <!-- Minimized Window Icon -->
-    <i>
+    <i (click)="minizedWindow()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
@@ -50,5 +49,5 @@
       </svg>
     </i>
   </section>
-
+<a href="">{{nodeVersion}}</a>
 </main>

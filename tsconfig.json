@@ -14,16 +14,20 @@
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "es2022",
+    "module": "es2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "allowJs": true,
+    "checkJs": false,
+    "lib": ["es2022", "dom"],
   },
+  "ts-node": {
+    "esm": true,
+  },
+  "include": ["src/**/*.ts", "environment.d.ts"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
