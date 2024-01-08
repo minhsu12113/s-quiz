@@ -30,10 +30,10 @@
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
+
     "@angular-devkit/build-angular": "^16.2.1",
     "@angular/cli": "~16.2.1",
     "@angular/compiler-cli": "^16.2.0",
-    "@types/electron": "^1.6.10",
     "@types/jasmine": "~4.3.0",
     "autoprefixer": "^10.4.16",
     "jasmine-core": "~4.6.0",
@@ -44,7 +44,6 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
-    "tsx": "^4.7.0",
     "typescript": "~5.1.3"
   }
 }

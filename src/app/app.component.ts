@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
   title = 's-quiz';
-  nodeVersion = (window as any).versions.node();
+  nodeVersion = ''
+  versionAPI : any = (window as any).versions
+
+  ngOnInit(): void {
+    if(this.versionAPI != null){
+      this.nodeVersion = this.versionAPI.node();
+    }
+  }
+
 
   minizedWindow() {
     (window as any).elecApi.mainWindowMinimize()
