@@ -29,7 +29,6 @@
   "ts-node": {
     "esm": true,
   },
-  "include": ["src/**/*.ts", "environment.d.ts"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

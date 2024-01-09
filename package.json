@@ -5,12 +5,13 @@
     "ng": "ng",
     "ng:serve": "ng serve",
     "build": "ng build",
+    "tsbuild": "tsc --project tsconfig.electron.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test --no-watch --no-progress --browsers=ChromeHeadless",
-    "electron:serve": "npm-run-all -p ng:serve electron:start",
+    "electron:serve": "npm-run-all -p ng:serve tsbuild electron:start",
     "electron:start": "wait-on tcp:4200 && electron ."
   },
-  "main": "./main.js",
+  "main": "./src/electron/build/main.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",

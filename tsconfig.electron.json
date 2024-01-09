@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "src/electron/build/",
+  },
+  "files": [
+    "src/electron/main.ts",
+    "src/electron/preload.ts"
+  ]
+}

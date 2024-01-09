@@ -7,12 +7,14 @@ import { URL } from 'url';
 
 let mainWindow : BrowserWindow
 function onReady () {
+ const preloadPath = path.join(__dirname,'preload.js')
+ console.log(__dirname)
  let win = new BrowserWindow({
     width: 910,
     height: 700,
     webPreferences: {
       nodeIntegration: false,
-      preload: path.join(__dirname, 'preload.js'),
+      preload: preloadPath,
     },
     frame: false,
     resizable: true,
@@ -20,8 +22,11 @@ function onReady () {
     transparent: false
   })
 
-  win.loadURL('http://localhost:4200');
-  //win.webContents.openDevTools()
+  //win.loadURL('http://localhost:4200');
+
+
+  win.loadURL('E:/Codes/Practice/s-quiz/dist/s-quiz/index.html');
+  win.webContents.openDevTools()
   mainWindow = win
 }
 
