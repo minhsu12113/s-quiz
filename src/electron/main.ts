@@ -22,7 +22,7 @@ function onReady () {
   })
 
   win.loadURL('http://localhost:4200');
-  win.webContents.openDevTools()
+  //win.webContents.openDevTools()
   mainWindow = win
 }
 
@@ -30,7 +30,7 @@ function onReady () {
 app.on('ready', onReady);
 
 ipcMain.on('mainWindowMinimize', () => {
-  mainWindow.minimize()
+  //mainWindow.minimize()
 })
 
 ipcMain.on('closeWindow', () => {
